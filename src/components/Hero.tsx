@@ -31,7 +31,7 @@ export default function Hero() {
         transition={{ delay: 0.3, duration: 0.7 }}
         className="mt-4 max-w-xl text-gray-300 font-mono"
       >
-        I build modern web apps with clean UI/UX. React, TypeScript, Tailwind are my tools of choice.
+        Engineering Student | IND
       </motion.p>
 
       <div className="mt-8 flex space-x-4">
