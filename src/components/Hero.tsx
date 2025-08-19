@@ -1,6 +1,5 @@
 import { Typewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
-import { Link as ScrollLink } from "react-scroll";
 
 export default function Hero() {
   return (
@@ -19,7 +18,7 @@ export default function Hero() {
           loop={1} // 0 = infinite
           cursor
           cursorStyle="|"
-          typeSpeed={70}
+          typeSpeed={50}
           deleteSpeed={50}
           delaySpeed={1500}
         />
@@ -29,31 +28,12 @@ export default function Hero() {
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.7 }}
-        className="mt-4 max-w-xl text-gray-300 font-mono"
+        className="mt-4 max-w-xl text-gray-300 font-mono text-lg md:text-2xl"
       >
-        Engineering Student | IND
       </motion.p>
 
       <div className="mt-8 flex space-x-4">
-        <ScrollLink
-          to="projects"
-          smooth
-          offset={-50}
-          duration={500}
-          className="px-4 py-2 border border-accent text-accent font-mono rounded hover:bg-accent hover:text-gray-900 transition-all cursor-pointer"
-        >
-          View Projects
-        </ScrollLink>
 
-        <ScrollLink
-          to="contact"
-          smooth
-          offset={-50}
-          duration={500}
-          className="px-4 py-2 border border-accent text-accent font-mono rounded hover:bg-accent hover:text-gray-900 transition-all cursor-pointer"
-        >
-          Contact Me
-        </ScrollLink>
       </div>
     </section>
   );

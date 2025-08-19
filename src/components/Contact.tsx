@@ -9,20 +9,20 @@ export default function Contact() {
       <h2 className="text-4xl font-mono font-bold text-accent mb-8">Contact Me</h2>
       <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 text-xl font-mono">
         <a
-          href="mailto:your-email@example.com"
+          href="mailto:s.deevanapalli@gmail.com"
           className="flex items-center space-x-2 hover:text-accent transition-colors"
         >
           <FaEnvelope /> <span>&lt;email&gt;</span>
         </a>
         <a
-          href="https://github.com/yourusername"
+          href="https://github.com/sdeevanpalli"
           target="_blank"
           className="flex items-center space-x-2 hover:text-accent transition-colors"
         >
           <FaGithub /> <span>&lt;github&gt;</span>
         </a>
         <a
-          href="https://linkedin.com/in/yourusername"
+          href="https://linkedin.com/in/sdeevanpalli"
           target="_blank"
           className="flex items-center space-x-2 hover:text-accent transition-colors"
         >
