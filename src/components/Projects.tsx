@@ -7,28 +7,26 @@ const projects = [
     description: "Web app helping students find empty classrooms during free periods with real-time availability and room sorting by blocks.",
     tech: ["HTML", "CSS", "JavaScript", "Vercel"],
     github: "https://github.com/sdeevanapalli/quietspace",
-    live: "#",
+    live: "https://qsbphc.vercel.app",
   },
   {
     name: "Campus101",
     description: "Modern campus guide for BITS Pilani with 3D cards, interactive maps, and comprehensive information for all three campuses.",
     tech: ["React", "TypeScript", "Tailwind", "Framer Motion", "React Leaflet"],
     github: "https://github.com/sdeevanapalli/campus101",
-    live: "#",
+    live: "https://campus101-sable.vercel.app",
   },
   {
     name: "CarAdvisor AI",
     description: "Advanced ML-powered car recommendation system using ensemble methods, cosine similarity, k-means clustering, and collaborative filtering.",
     tech: ["React", "TypeScript", "Tailwind", "Machine Learning", "Vite"],
     github: "https://github.com/LuciferK47/advicemegang",
-    live: "#",
   },
   {
     name: "AuditGen AI",
     description: "RAG-powered audit automation platform using OpenAI GPT models for generating compliance reports and audit documentation.",
     tech: ["Python", "Streamlit", "OpenAI API", "Google Drive API", "RAG"],
     github: "https://github.com/sdeevanapalli/audit_gen",
-    live: "#",
   },
 ];
 
