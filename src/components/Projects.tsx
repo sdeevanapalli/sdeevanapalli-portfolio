@@ -32,7 +32,10 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="min-h-screen px-6 py-20 bg-gray-950 text-white">
+    <section 
+      id="projects" 
+      className="min-h-screen px-6 py-20 bg-gray-950 text-white lg:pl-24"
+    >
       <h2 className="text-4xl font-mono font-bold text-accent mb-12 text-center">
         Projects
       </h2>
@@ -62,9 +65,11 @@ export default function Projects() {
               <a href={proj.github} target="_blank" className="hover:text-accent transition-all">
                 <FaGithub size={20} />
               </a>
-              <a href={proj.live} target="_blank" className="hover:text-accent transition-all">
-                <FaExternalLinkAlt size={20} />
-              </a>
+              {proj.live && (
+                <a href={proj.live} target="_blank" className="hover:text-accent transition-all">
+                  <FaExternalLinkAlt size={20} />
+                </a>
+              )}
             </div>
           </motion.div>
         ))}
