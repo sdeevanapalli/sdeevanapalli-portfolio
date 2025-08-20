@@ -32,7 +32,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="min-h-screen px-6 py-20 pl-20 bg-gray-950 text-white">
+    <section id="projects" className="min-h-screen px-6 py-20 bg-gray-950 text-white">
       <h2 className="text-4xl font-mono font-bold text-accent mb-12 text-center">
         Projects
       </h2>
