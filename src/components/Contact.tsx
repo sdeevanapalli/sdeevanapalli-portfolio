@@ -29,10 +29,6 @@ export default function Contact() {
           <FaLinkedin /> <span>&lt;linkedin&gt;</span>
         </a>
       </div>
-
-      <p className="mt-12 text-gray-500 text-sm font-mono">
-        &copy; {new Date().getFullYear()} Shriniketh. All rights reserved.
-      </p>
     </section>
   );
 }
