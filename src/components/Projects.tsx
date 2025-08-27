@@ -5,7 +5,7 @@ const projects = [
   {
     name: "QuietSpace",
     description: "Web app helping students find empty classrooms during free periods with real-time availability and room sorting by blocks.",
-    tech: ["HTML", "CSS", "JavaScript", "Vercel"],
+    tech: ["HTML/CSS", "JavaScript", "Vercel"],
     github: "https://github.com/sdeevanapalli/quietspace",
     live: "https://qsbphc.vercel.app",
   },
@@ -19,7 +19,7 @@ const projects = [
   {
     name: "CarAdvisor AI",
     description: "Advanced ML-powered car recommendation system using ensemble methods, cosine similarity, k-means clustering, and collaborative filtering.",
-    tech: ["React", "TypeScript", "Tailwind", "Machine Learning", "Vite"],
+    tech: ["React", "TypeScript", "Tailwind", "ML", "Vite"],
     github: "https://github.com/LuciferK47/advicemegang",
   },
   {
@@ -27,6 +27,12 @@ const projects = [
     description: "RAG-powered audit automation platform using OpenAI GPT models for generating compliance reports and audit documentation.",
     tech: ["Python", "Streamlit", "OpenAI API", "Google Drive API", "RAG"],
     github: "https://github.com/sdeevanapalli/audit_gen",
+  },
+  {
+    name: "Locava",
+    description: "A location bookmarking web application to quickly save and access location-based information. Works offline using PWA technology with a clean interface.",
+    tech: ["HTML/CSS", "JavaScript", "PWA", "LocalStorage", "Service Worker"],
+    github: "https://github.com/sdeevanapalli/locava"
   },
 ];
 
