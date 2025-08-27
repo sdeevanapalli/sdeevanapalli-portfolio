@@ -15,7 +15,7 @@ export default function Contact() {
           <FaEnvelope /> <span>&lt;email&gt;</span>
         </a>
         <a
-          href="https://github.com/sdeevanpalli"
+          href="https://github.com/sdeevanapalli"
           target="_blank"
           className="flex items-center space-x-2 hover:text-accent transition-colors"
         >
