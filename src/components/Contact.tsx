@@ -22,7 +22,7 @@ export default function Contact() {
           <FaGithub /> <span>&lt;github&gt;</span>
         </a>
         <a
-          href="https://linkedin.com/in/sdeevanpalli"
+          href="https://linkedin.com/in/sdeevanapalli"
           target="_blank"
           className="flex items-center space-x-2 hover:text-accent transition-colors"
         >
