@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import { Analytics } from "@vercel/analytics/next";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <section id="projects"><Projects /></section>
       <section id="about"><About /></section>
       <section id="contact"><Contact /></section>
+      <Analytics />
     </div>
   );
 }
