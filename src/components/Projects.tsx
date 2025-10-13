@@ -4,7 +4,7 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 const projects = [
   {
     name: "QuietSpace",
-    description: "Web app helping students find empty classrooms during free periods with real-time availability and room sorting by blocks.",
+    description: "Web app helping students find empty classrooms during free periods with real-time availability and room sorting by blocks. Achieved 60k+ views within 1 year of launch.",
     tech: ["HTML/CSS", "JavaScript", "Vercel"],
     github: "https://github.com/sdeevanapalli/quietspace",
     live: "https://qsbphc.vercel.app",
@@ -18,9 +18,9 @@ const projects = [
   },
   {
     name: "CarAdvisor AI",
-    description: "Advanced ML-powered car recommendation system using ensemble methods, cosine similarity, k-means clustering, and collaborative filtering.",
+    description: "Advanced ML-driven car recommendation engine leveraging **ensemble models, cosine similarity, k-means clustering,** and **collaborative filtering** for highly personalized suggestions.",
     tech: ["React", "TypeScript", "Tailwind", "ML", "Vite"],
-    github: "https://github.com/LuciferK47/advicemegang",
+    github: "https://github.com/sdeevanapalli/advicemegang",
   },
   {
     name: "AuditGen AI",
@@ -30,7 +30,7 @@ const projects = [
   },
   {
     name: "Locava",
-    description: "A location bookmarking web application to quickly save and access location-based information. Works offline using PWA technology with a clean interface.",
+    description: "Lightweight **Progressive Web App (PWA)** for **saving, organizing, and sharing favorite locations**, built with pure HTML, CSS, and JavaScript — featuring **offline support, local data storage (IndexedDB),** and **installable mobile/desktop functionality** for a seamless, privacy-focused mapping experience.",
     tech: ["HTML/CSS", "JavaScript", "PWA", "LocalStorage", "Service Worker"],
     github: "https://github.com/sdeevanapalli/locava"
   },
