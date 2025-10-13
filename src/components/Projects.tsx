@@ -32,7 +32,8 @@ const projects = [
     name: "Locava",
     description: "Lightweight Progressive Web App (PWA) for saving, organizing, and sharing favorite locations, built with pure HTML, CSS, and JavaScript — featuring **offline support, local data storage (IndexedDB), and installable mobile/desktop functionality for a seamless, privacy-focused mapping experience.",
     tech: ["HTML/CSS", "JavaScript", "PWA", "LocalStorage", "Service Worker"],
-    github: "https://github.com/sdeevanapalli/locava"
+    github: "https://github.com/sdeevanapalli/locava",
+    live: "https://locava.vercel.app",
   },
 ];
 
