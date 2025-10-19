@@ -18,7 +18,7 @@ const projects = [
   },
   {
     name: "CarAdvisor AI",
-    description: "Advanced ML-driven car recommendation engine leveraging **ensemble models, cosine similarity, k-means clustering,** and **collaborative filtering** for highly personalized suggestions.",
+    description: "Advanced ML-driven car recommendation engine leveraging ensemble models, cosine similarity, k-means clustering, and collaborative filtering for highly personalized suggestions.",
     tech: ["React", "TypeScript", "Tailwind", "ML", "Vite"],
     github: "https://github.com/sdeevanapalli/advicemegang",
   },
