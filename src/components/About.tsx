@@ -31,7 +31,7 @@ export default function About() {
       >
         <p>
           I’m <span className="text-accent">Shriniketh Deevanapalli</span>, a
-          developer who enjoys building things that are clean, fast, and
+          student who enjoys building things that are clean, fast, and
           reliable. I’ve worked on everything from small tools to full-stack
           applications, and I’m comfortable moving across the stack — designing
           UIs, writing scalable backend code, and handling deployments.
