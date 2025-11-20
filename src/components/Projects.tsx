@@ -68,16 +68,16 @@ const projects = [
   },
 ];
 
-
 export default function Projects() {
   return (
-    <section 
-      id="projects" 
+    <section
+      id="projects"
       className="min-h-screen px-6 py-20 bg-gray-950 text-white lg:pl-24"
     >
       <h2 className="text-4xl font-mono font-bold text-accent mb-12 text-center">
         Projects
       </h2>
+
       <div className="grid md:grid-cols-2 gap-8">
         {projects.map((proj, i) => (
           <motion.div
@@ -88,8 +88,12 @@ export default function Projects() {
             transition={{ duration: 0.5, delay: i * 0.2 }}
             className="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-accent/50 transition-shadow"
           >
-            <h3 className="text-2xl font-mono font-bold text-accent mb-2">{proj.name}</h3>
+            <h3 className="text-2xl font-mono font-bold text-accent mb-2">
+              {proj.name}
+            </h3>
+
             <p className="text-gray-300 mb-4">{proj.description}</p>
+
             <div className="flex flex-wrap gap-2 mb-4">
               {proj.tech.map((tech, j) => (
                 <span
@@ -100,12 +104,26 @@ export default function Projects() {
                 </span>
               ))}
             </div>
+
             <div className="flex space-x-4">
-              <a href={proj.github} target="_blank" className="hover:text-accent transition-all">
-                <FaGithub size={20} />
-              </a>
+              {/* Show GitHub only if link exists */}
+              {proj.github && (
+                <a
+                  href={proj.github}
+                  target="_blank"
+                  className="hover:text-accent transition-all"
+                >
+                  <FaGithub size={20} />
+                </a>
+              )}
+
+              {/* Show Live link only if provided */}
               {proj.live && (
-                <a href={proj.live} target="_blank" className="hover:text-accent transition-all">
+                <a
+                  href={proj.live}
+                  target="_blank"
+                  className="hover:text-accent transition-all"
+                >
                   <FaExternalLinkAlt size={20} />
                 </a>
               )}
