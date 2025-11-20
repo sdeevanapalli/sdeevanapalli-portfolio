@@ -4,61 +4,70 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 const projects = [
   {
     name: "Internal Audit Officer (IAO)",
-    description: "AI-powered audit automation platform using RAG and semantic search over organization documents with Google Drive integration.",
+    description:
+      "A practical audit-automation tool built on top of a RAG pipeline. It indexes internal org documents (PDFs/Sheets/Drive files) and lets auditors run semantic queries, generate evidence-backed summaries, and speed up compliance workflows. Includes Google Drive ingestion + a Streamlit UI.",
     tech: ["Python", "Streamlit", "OpenAI API", "Google Drive API"],
-    github: "https://github.com/sdeevanapalli/audit_gen",  
+    github: "https://github.com/sdeevanapalli/audit_gen",
     live: "",
   },
   {
     name: "Blockchain Healthcare Record System",
-    description: "Secure medical record platform using Merkle verification and consent-based access with Flask REST APIs and identity workflows.",
+    description:
+      "A prototype EHR system on blockchain featuring Merkle-based tamper checks, consent-driven data access, and a lightweight identity/auth workflow. Exposes REST APIs through Flask for record creation, validation, and retrieval.",
     tech: ["Python", "Flask", "Blockchain"],
     github: "",
     live: "",
   },
   {
-    name: "Strava GeoMap",
-    description: "Full-stack app visualizing Strava cycling routes on interactive maps with secure OAuth flow and performance-optimized rendering.",
+    name: "Strava GeoMap (RideBuddy)",
+    description:
+      "A full-stack visualization tool that pulls cycling routes from the Strava API and renders them on interactive vector maps. Includes OAuth integration, ride analytics, and optimized map-layer rendering for smooth performance.",
     tech: ["Next.js", "Tailwind", "Leaflet", "Express", "Strava API"],
     github: "https://github.com/sdeevanapalli/strava_geomap",
     live: "https://strava-geomap.vercel.app",
   },
   {
     name: "Garud LMS",
-    description: "Learning management system with JWT auth, dashboards, and role-based access using Prisma and PostgreSQL backend.",
+    description:
+      "A clean LMS with JWT-based authentication, RBA (admin/instructor/student), dashboards, and an API layer running on Express. Data is modeled using Prisma and stored in PostgreSQL with migrations + schema versioning.",
     tech: ["Next.js", "Express.js", "PostgreSQL", "Prisma", "Tailwind"],
     github: "https://github.com/sdeevanapalli/garud",
     live: "",
   },
   {
     name: "Campus101",
-    description: "Campus guide platform with mess schedules, transport info, emergency contacts, and animated responsive UI.",
+    description:
+      "A campus-utility app that bundles mess schedules, transport timings, emergency contacts, and a polished UI with micro-interactions. Fully responsive, animated with Framer Motion, and built with a clean TypeScript/React stack.",
     tech: ["React", "TypeScript", "Tailwind", "Framer Motion"],
     github: "https://github.com/sdeevanapalli/campus101",
     live: "https://campus101.vercel.app",
   },
   {
     name: "QuietSpace",
-    description: "Web app for finding empty classrooms with real-time availability. Crossed 70k+ views and 3k+ users.",
+    description:
+      "A simple tool for finding empty classrooms in real time. Lightweight, super fast, and ended up reaching 70k+ impressions and 3k+ users. Frontend-only but optimized well enough to feel app-like on Vercel.",
     tech: ["HTML/CSS", "JavaScript", "Vercel"],
     github: "https://github.com/sdeevanapalli/quietspace",
     live: "https://qsbphc.vercel.app",
   },
   {
     name: "Spotify Standby",
-    description: "Minimalist playback controller integrating Spotify API with PWA support and offline-ready UI.",
+    description:
+      "A minimal playback controller for Spotify with PWA support and a clean, distraction-free interface. Useful as a compact ‘always-on’ controller separate from the main Spotify app.",
     tech: ["HTML/CSS", "JavaScript", "Spotify API", "PWA"],
     github: "",
     live: "",
   },
   {
     name: "Locava",
-    description: "Lightweight Progressive Web App (PWA) for saving, organizing, and sharing favorite locations, built with pure HTML, CSS, and JavaScript — featuring **offline support, local data storage (IndexedDB), and installable mobile/desktop functionality for a seamless, privacy-focused mapping experience.",
+    description:
+      "A lightweight PWA for saving and organizing favourite locations — fully offline, uses IndexedDB under the hood, and ships as an installable web app. Built with just vanilla HTML/CSS/JS + service workers for a privacy-first experience.",
     tech: ["HTML/CSS", "JavaScript", "PWA", "LocalStorage", "Service Worker"],
     github: "https://github.com/sdeevanapalli/locava",
     live: "https://locava.vercel.app",
   },
 ];
+
 
 export default function Projects() {
   return (
