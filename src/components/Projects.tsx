@@ -3,6 +3,22 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const projects = [
   {
+    name: "ComplyFlow",
+    description:
+      "An AI-powered tax compliance assistant leveraging RAG to navigate complex regulations. It features intelligent query resolution, automated document analysis for extracting compliance requirements, and proactive monitoring of regulatory changes using Google Vertex AI.",
+    tech: ["React", "Vertex AI", "Gemini 2.0", "Node.js", "Vector DB"],
+    github: "https://github.com/sdeevanapalli/complyflow-public",
+    live: "",
+  },
+  {
+    name: "Smart Attendance System",
+    description:
+      "A full-stack facial recognition platform that automates classroom attendance. It features a MERN-based management dashboard integrated with a Django machine learning microservice using LBPH (Local Binary Patterns Histograms) and Haar Cascades for real-time face detection and identification.",
+    tech: ["MongoDB", "Express", "React", "Node.js", "Django", "OpenCV", "Python"],
+    github: "",
+    live: "",
+  },
+  {
     name: "Internal Audit Officer (IAO)",
     description:
       "A practical audit-automation tool built on top of a RAG pipeline. It indexes internal org documents (PDFs/Sheets/Drive files) and lets auditors run semantic queries, generate evidence-backed summaries, and speed up compliance workflows. Includes Google Drive ingestion + a Streamlit UI.",
