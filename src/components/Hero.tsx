@@ -100,7 +100,7 @@ export default function Hero() {
           
           <div className="text-4xl md:text-6xl font-mono font-bold text-accent mb-4">
             <Typewriter
-              words={['"Shriniketh Deevanapalli";']}
+              words={['"Shriniketh Deevanapalli"']}
               loop={1}
               cursor
               cursorStyle="_"
