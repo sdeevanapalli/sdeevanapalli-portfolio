@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import { Link as ScrollLink } from "react-scroll"; // smooth scroll
+import { Link as ScrollLink } from "react-scroll";
 import { FaCode, FaFolderOpen, FaEnvelope, FaLaptopCode, FaBars, FaTimes } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const sections = [
   { name: "Home", icon: <FaCode />, id: "home" },
@@ -38,27 +39,45 @@ export default function Navbar() {
   return (
     <>
       {/* Desktop Navbar - Always visible on lg screens and up */}
-      <div className="hidden lg:flex fixed top-0 left-0 h-screen w-16 flex-col items-center bg-gray-900 shadow-lg py-6 space-y-4 z-50">
-        {sections.map((sec) => (
-          <ScrollLink
+      <motion.div 
+        initial={{ x: -100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        className="hidden lg:flex fixed top-0 left-0 h-screen w-16 flex-col items-center bg-gray-900 border-r-2 border-gray-800 shadow-2xl py-6 space-y-4 z-50"
+      >
+        {sections.map((sec, index) => (
+          <motion.div
             key={sec.id}
-            to={sec.id}
-            smooth
-            offset={-50}
-            duration={500}
-            className={`relative group flex items-center justify-center w-12 h-12 cursor-pointer rounded hover:bg-gray-800 transition-all ${
-              activeSection === sec.id ? "text-blue-400" : "text-gray-400"
-            }`}
+            initial={{ x: -50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ delay: index * 0.1 + 0.2 }}
           >
-            {sec.icon}
-            {/* Tooltip */}
-            <span className="absolute left-14 px-2 py-1 bg-gray-800 text-white rounded opacity-0 group-hover:opacity-100 transition-all whitespace-nowrap font-mono text-sm">
-              &lt;{sec.name.toLowerCase()}&gt;
-              <span className="animate-pulse">|</span>
-            </span>
-          </ScrollLink>
+            <ScrollLink
+              to={sec.id}
+              smooth
+              offset={-50}
+              duration={500}
+              className={`relative group flex items-center justify-center w-12 h-12 cursor-pointer rounded-lg hover:bg-gray-800 transition-all border-2 ${
+                activeSection === sec.id 
+                  ? "text-accent border-accent shadow-lg shadow-accent/50" 
+                  : "text-gray-400 border-transparent hover:border-gray-700"
+              }`}
+            >
+              <motion.div
+                whileHover={{ scale: 1.2, rotate: 5 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                {sec.icon}
+              </motion.div>
+              {/* Tooltip */}
+              <span className="absolute left-14 px-3 py-2 bg-gray-800 border-2 border-accent text-white rounded-lg opacity-0 group-hover:opacity-100 transition-all whitespace-nowrap font-mono text-sm shadow-lg shadow-accent/30">
+                &lt;{sec.name.toLowerCase()}&gt;
+                <span className="animate-pulse text-accent">_</span>
+              </span>
+            </ScrollLink>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
 
       {/* Mobile Hamburger Button */}
       <button

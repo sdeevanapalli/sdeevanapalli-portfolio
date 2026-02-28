@@ -8,7 +8,7 @@ module.exports = {
         accent: "#10b981",  // tech green highlights
       },
       fontFamily: {
-        mono: ["Fira Code", "monospace"], // coding vibe
+        mono: ["JetBrains Mono", "IBM Plex Mono", "Courier New", "monospace"],
       },
     },
   },
