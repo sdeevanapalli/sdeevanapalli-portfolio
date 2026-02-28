@@ -6,7 +6,7 @@ export default function Contact() {
   const contactLinks = [
     { icon: FaEnvelope, href: `mailto:${email}`, label: "Email", color: "text-red-400" },
     { icon: FaGithub, href: "https://github.com/sdeevanapalli", label: "GitHub", color: "text-gray-400" },
-    { icon: FaLinkedin, href: "https://linkedin.com/in/shriniketh-deevanapalli", label: "LinkedIn", color: "text-blue-400" },
+    { icon: FaLinkedin, href: "https://linkedin.com/in/sdeevanapalli", label: "LinkedIn", color: "text-blue-400" },
   ];
 
   return (
