@@ -57,9 +57,9 @@ export default function Hero() {
             <span className="text-xs text-accent font-mono ml-auto">today.snapshot</span>
           </div>
           <div className="font-mono text-xs text-gray-400 space-y-2">
-            <motion.div animate={{ opacity: [0.5, 1, 0.5] }} transition={{ repeat: Infinity, duration: 3 }}>
+            <div>
               <span className="text-blue-400">const</span> <span className="text-yellow-300">status</span> = {'{'}
-            </motion.div>
+            </div>
             <div className="ml-4">
               <span className="text-purple-400">building:</span> <span className="text-green-400">'amazing things'</span>,
             </div>
@@ -167,7 +167,7 @@ export default function Hero() {
                   className="flex-1 bg-transparent border-none outline-none text-white font-mono"
                   autoComplete="off"
                 />
-                <span className="animate-pulse text-accent">|</span>
+                <span className="text-accent">|</span>
               </div>
             </div>
           </motion.div>

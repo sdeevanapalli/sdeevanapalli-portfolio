@@ -326,5 +326,40 @@ html {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  .scanline,
+  .code-float-extra {
+    display: none;
+  }
+}
+
+@media (max-width: 768px), (hover: none) and (pointer: coarse) {
+  .bg-grid-pattern {
+    animation: none;
+  }
+
+  .scanline,
+  .code-float-extra {
+    display: none;
+  }
+
+  .code-float {
+    animation: none;
+    opacity: 0.18;
+  }
+
+  .glitch-text {
+    animation: none;
+    text-shadow: none;
+  }
+
+  .glitch-text::before,
+  .glitch-text::after {
+    display: none;
+  }
 }
 

@@ -12,7 +12,7 @@ export default function LoadingScreen({ onLoadingComplete }: LoadingScreenProps)
     const timer = setTimeout(() => {
       setLoading(false);
       onLoadingComplete?.();
-    }, 2500);
+    }, 1200);
     return () => clearTimeout(timer);
   }, [onLoadingComplete]);
 
@@ -55,8 +55,8 @@ export default function LoadingScreen({ onLoadingComplete }: LoadingScreenProps)
             </div>
 
             <motion.div
-              animate={{ opacity: [0.5, 1, 0.5] }}
-              transition={{ repeat: Infinity, duration: 1.5 }}
+              animate={{ opacity: [0.7, 1, 0.7] }}
+              transition={{ repeat: Infinity, duration: 2.2 }}
               className="text-accent flex items-center gap-2"
             >
               <span>▌</span>
@@ -85,38 +85,11 @@ export default function LoadingScreen({ onLoadingComplete }: LoadingScreenProps)
             </div>
 
             <div className="mt-4 text-xs text-gray-500 flex items-center gap-2">
-              <motion.span
-                animate={{ rotate: 360 }}
-                transition={{ repeat: Infinity, duration: 2, ease: 'linear' }}
-              >
-                ⟳
-              </motion.span>
+              <span>⟳</span>
               Welcome to the portfolio...
             </div>
           </div>
         </motion.div>
-
-        {/* Floating Code Particles */}
-        {[...Array(5)].map((_, i) => (
-          <motion.div
-            key={i}
-            initial={{ x: -100, y: 100, opacity: 0 }}
-            animate={{
-              x: Math.cos((i / 5) * Math.PI * 2) * 80,
-              y: Math.sin((i / 5) * Math.PI * 2) * 80,
-              opacity: 0.6,
-              scale: [1, 1.2, 1],
-            }}
-            transition={{
-              duration: 3,
-              repeat: Infinity,
-              delay: i * 0.2,
-            }}
-            className="absolute text-accent font-mono text-lg pointer-events-none"
-          >
-            {['const', 'function', '{ }', '=>', '</>'][i]}
-          </motion.div>
-        ))}
       </div>
     </motion.div>
   );

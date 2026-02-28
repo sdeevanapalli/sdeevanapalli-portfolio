@@ -1,6 +1,4 @@
-import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt, FaCode } from "react-icons/fa";
-import { useState } from "react";
 
 const projects = [
   {
@@ -86,8 +84,6 @@ const projects = [
 ];
 
 export default function Projects() {
-  const [hoveredProject, setHoveredProject] = useState<number | null>(null);
-
   return (
     <section
       id="projects"
@@ -95,65 +91,31 @@ export default function Projects() {
     >
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <motion.div
-          animate={{ y: [0, 30, 0], rotate: 360 }}
-          transition={{ repeat: Infinity, duration: 30, ease: "easeInOut" }}
-          className="absolute -top-56 -right-56 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"
-        />
-        <motion.div
-          animate={{ y: [0, -30, 0], rotate: -360 }}
-          transition={{ repeat: Infinity, duration: 35, ease: "easeInOut" }}
-          className="absolute -bottom-56 -left-56 w-96 h-96 bg-accent/10 rounded-full blur-3xl"
-        />
-        <motion.div
-          animate={{ scale: [1, 1.2, 1] }}
-          transition={{ repeat: Infinity, duration: 20, ease: "easeInOut" }}
-          className="absolute top-1/2 left-1/2 w-80 h-80 -translate-x-1/2 -translate-y-1/2 bg-purple-500/5 rounded-full blur-3xl"
-        />
+        <div className="absolute -top-56 -right-56 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
+        <div className="absolute -bottom-56 -left-56 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 w-80 h-80 -translate-x-1/2 -translate-y-1/2 bg-purple-500/5 rounded-full blur-3xl" />
       </div>
       <div className="relative z-10 w-full">
       {/* VS Code Style Tab */}
-      <motion.div
-        initial={{ y: -20, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        viewport={{ once: true }}
-        className="absolute top-8 left-8 hidden md:flex items-center gap-2 bg-gray-800 px-4 py-2 rounded-t-lg border-b-2 border-blue-500"
-      >
+      <div className="absolute top-8 left-8 hidden md:flex items-center gap-2 bg-gray-800 px-4 py-2 rounded-t-lg border-b-2 border-blue-500">
         <span className="text-xs text-blue-400 font-mono">Projects.tsx</span>
         <span className="text-gray-500">×</span>
-      </motion.div>
+      </div>
 
-      <motion.h2
-        initial={{ opacity: 0, x: -100 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="text-5xl md:text-6xl font-mono font-bold text-accent mb-16 text-center"
-      >
+      <h2 className="text-5xl md:text-6xl font-mono font-bold text-accent mb-16 text-center">
         <span className="text-gray-500">// </span>Projects
-      </motion.h2>
+      </h2>
 
       <div className="max-w-6xl w-full mx-auto">
         {/* Project Grid */}
         <div className="grid md:grid-cols-2 gap-6 mb-12">
           {projects.map((proj, i) => (
-            <motion.div
+            <div
               key={i}
-              initial={{ opacity: 0, x: i % 2 === 0 ? -100 : 100 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: (i % 2) * 0.2, duration: 0.8, ease: "easeOut" }}
-              whileHover={{ translateY: -8 }}
-              onHoverStart={() => setHoveredProject(i)}
-              onHoverEnd={() => setHoveredProject(null)}
-              className="group relative bg-gradient-to-br from-gray-900 to-gray-950 border-2 border-gray-800 hover:border-accent rounded-lg p-6 shadow-lg hover:shadow-accent/20 transition-all duration-300 overflow-hidden"
+              className="group relative bg-gradient-to-br from-gray-900 to-gray-950 border-2 border-gray-800 hover:border-accent rounded-lg p-6 shadow-lg hover:shadow-accent/20 overflow-hidden"
             >
               {/* Background glow on hover */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: hoveredProject === i ? 0.1 : 0 }}
-                className="absolute inset-0 bg-gradient-to-r from-accent to-blue-500 blur-2xl"
-              />
+              <div className="absolute inset-0 bg-gradient-to-r from-accent to-blue-500 blur-2xl opacity-0 group-hover:opacity-10" />
 
               <div className="relative z-10">
                 {/* Header with icon */}
@@ -163,16 +125,14 @@ export default function Projects() {
                     {proj.name}
                   </h3>
                   {proj.github && (
-                    <motion.a
+                    <a
                       href={proj.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      whileHover={{ scale: 1.2, rotate: 5 }}
-                      whileTap={{ scale: 0.9 }}
-                      className="text-gray-400 hover:text-accent transition-colors"
+                      className="text-gray-400 hover:text-accent"
                     >
                       {/* <FaGithub size={20} /> */}
-                    </motion.a>
+                    </a>
                   )}
                 </div>
 
@@ -184,68 +144,50 @@ export default function Projects() {
                 {/* Tech Stack */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {proj.tech.map((tech, j) => (
-                    <motion.span
+                    <span
                       key={j}
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: j * 0.05 }}
-                      className="text-xs px-3 py-1 border-2 border-accent/50 hover:border-accent rounded-full font-mono text-accent/80 hover:text-accent transition-all duration-300 bg-accent/5 hover:bg-accent/10"
+                      className="text-xs px-3 py-1 border-2 border-accent/50 hover:border-accent rounded-full font-mono text-accent/80 hover:text-accent bg-accent/5 hover:bg-accent/10"
                     >
                       {tech}
-                    </motion.span>
+                    </span>
                   ))}
                 </div>
 
                 {/* Links */}
                 <div className="flex items-center gap-4 pt-4 border-t border-gray-700">
                   {proj.live && (
-                    <motion.a
+                    <a
                       href={proj.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors text-sm"
+                      className="flex items-center gap-2 text-blue-400 hover:text-blue-300 text-sm"
                     >
                       <FaExternalLinkAlt size={14} />
                       Demo
-                    </motion.a>
+                    </a>
                   )}
                   {proj.github && (
-                    <motion.a
+                    <a
                       href={proj.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="flex items-center gap-2 text-gray-400 hover:text-accent transition-colors text-sm"
+                      className="flex items-center gap-2 text-gray-400 hover:text-accent text-sm"
                     >
                       <FaGithub size={14} />
                       Code
-                    </motion.a>
+                    </a>
                   )}
                 </div>
               </div>
 
               {/* Bottom accent line */}
-              <motion.div
-                initial={{ scaleX: 0 }}
-                animate={{ scaleX: hoveredProject === i ? 1 : 0 }}
-                transition={{ duration: 0.3 }}
-                className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-accent to-blue-500 origin-left"
-              />
-            </motion.div>
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-accent to-blue-500 origin-left opacity-0 group-hover:opacity-100" />
+            </div>
           ))}
         </div>
 
         {/* Terminal Style Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="bg-gray-900 border-2 border-gray-800 rounded-lg p-6 font-mono text-sm hover:border-accent/50 transition-colors"
-        >
+        <div className="bg-gray-900 border-2 border-gray-800 rounded-lg p-6 font-mono text-sm hover:border-accent/50">
           <div className="text-accent mb-4">$ portfolio --stats</div>
           <div className="space-y-2 text-gray-400">
             <p>
@@ -258,7 +200,7 @@ export default function Projects() {
               <span className="text-green-400">open_source:</span> {projects.filter((p) => p.github).length}
             </p>
           </div>
-        </motion.div>
+        </div>
       </div>
       </div>
     </section>
