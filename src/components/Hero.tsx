@@ -95,7 +95,7 @@ export default function Hero() {
           </motion.div>
           
           <h1 className="text-5xl md:text-7xl font-mono font-bold text-white mb-2 glitch-text" data-text="const developer =">
-            <span className="text-accent">&lt;</span>const <span className="text-blue-400">developer</span> = <span className="text-accent">;</span>
+            <span className="text-purple-400">const</span> <span className="text-blue-400">developer</span> <span className="text-white">=</span>
           </h1>
           
           <div className="text-4xl md:text-6xl font-mono font-bold text-accent mb-4">
