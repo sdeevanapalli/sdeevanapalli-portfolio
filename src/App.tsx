@@ -82,6 +82,38 @@ const projects = [
     github: "https://github.com/sdeevanapalli/locava",
     live: "https://locava.vercel.app",
   },
+  {
+    name: "TermSync",
+    description:
+      "A Spotify now-playing TUI for your terminal. Features album art, seek bar, pulse visualizer, track metadata, and playback history — live synced from Spotify.",
+    tech: ["Rust", "Spotify API", "Ratatui", "TUI"],
+    github: "https://github.com/sdeevanapalli/termsync",
+    live: "",
+  },
+  {
+    name: "Strava Activity Overlays",
+    description:
+      "Create social-ready overlays from your Strava activities with a canvas editor, activity dashboard, and Strava OAuth sign-in.",
+    tech: ["React", "Canvas API", "Strava OAuth", "TypeScript"],
+    github: "https://github.com/sdeevanapalli/strava-activity-overlays",
+    live: "https://strava-activity-overlays.vercel.app/",
+  },
+  {
+    name: "MiniSQL",
+    description:
+      "A compact in-memory SQL engine in Rust supporting core queries like SELECT, JOIN, WHERE, GROUP BY, SUM, and COUNT(*).",
+    tech: ["Rust", "SQL", "In-Memory", "Query Engine"],
+    github: "https://github.com/sdeevanapalli/miniSQL",
+    live: "",
+  },
+  {
+    name: "StreamTail",
+    description:
+      "A lightweight Rust CLI for tailing, streaming, and filtering logs in real time.",
+    tech: ["Rust", "CLI", "Log Streaming", "Filters"],
+    github: "https://github.com/sdeevanapalli/streamtail",
+    live: "",
+  },
 ];
 
 const techStack = [
