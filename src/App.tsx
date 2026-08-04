@@ -117,6 +117,9 @@ const projects = [
 ];
 
 const techStack = [
+  "Kotlin",
+  "Ktor",
+  "Java",
   "TypeScript",
   "React",
   "Node.js",
@@ -165,15 +168,16 @@ function App() {
               Full-stack developer building scalable, maintainable and user-focused software.
             </p>
             <p className="mt-4 max-w-2xl text-sm text-white/70 md:text-base">
-              Third year student at BITS Pilani, Hyderabad Campus.
+              Final year student at BITS Pilani, Hyderabad Campus.
             </p>
-            <p className="mt-2 text-sm text-[#00FFC0]">Open for internships, freelance, and collaborations.</p>
+            {/* <p className="mt-2 text-sm text-[#00FFC0]">Open for internships, freelance, and collaborations.</p> */}
+            <p className="mt-2 text-sm text-[#00FFC0]">Currently SDE Intern @ Porter.</p>
           </section>
 
           <section id="contact" className="bento-card md:col-span-4 md:row-span-1">
             <p className="text-xs uppercase tracking-[0.2em] text-white/50">Status</p>
-            <p className="mt-2 text-lg font-extrabold tracking-[-0.02em] text-white">Building stuff...</p>
-            <p className="mt-2 text-sm text-[#00FFC0]">Currently active on: React + TypeScript + Node.js</p>
+            <p className="mt-2 text-lg font-extrabold tracking-[-0.02em] text-white">Interning at Porter.</p>
+            <p className="mt-2 text-sm text-[#00FFC0]">Currently active on: Kotlin, Ktor, Claude Code xD</p>
             <p className="mt-1 text-sm text-white/60">Response Time: usually within 24 hours • IST (UTC+5:30)</p>
           </section>
 
